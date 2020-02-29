@@ -1,0 +1,43 @@
+body {
+    font-family:Helvetica, sans-serif;
+    font-size:12px;
+}
+* {
+    box-sizing: border-box;
+}
+#root {
+    width:600px;
+}
+#colors .row {
+    display:flex;
+}
+.block {
+    height: 50px;
+    margin: .5em;
+    padding:1em;
+    display: inline-block;
+    cursor: pointer;
+    flex: 1 0;
+}
+.block i {
+    margin:.2em;
+}
+.block span {
+    display:block;
+    text-align: center;
+    position:relative;
+    width:100%;
+}
+.black-text {
+    color:black
+}
+.white-text {
+    color:white
+}
+#message span {
+    margin:1em;
+    background:#d9dbde;
+    padding:1em;
+    display:block;
+    width:100%;
+}
