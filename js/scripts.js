@@ -1,4 +1,4 @@
-const colors = ['#f95a53', '#f98453', '#f8b23a', '#7cb771', '#61bdd1', '#90989e']
+const colors = ['#f95a53', '#f98453', '#f8b23a', '#57bb8a', '#61bdd1', '#90989e']
 
 colors.forEach(function (el) {
     const container = document.querySelector('#colors');
@@ -6,12 +6,14 @@ colors.forEach(function (el) {
     let lumDownA = chroma(el).luminance((current + -0.08), 'hsl').saturate(0.5).hex();
     let lumUpA = chroma(el).luminance((current + 0.2), 'hsl').hex();
     let lumUpB = chroma(el).luminance((current + 0.4), 'hsl').hex();
+    let lumUpC = chroma(el).luminance((current + 0.5), 'hsl').hex();
     let newBlock = `<div class="row">
         ${createBlockEl(lumDownA, true)}
         ${createBlockEl(el, true)}
         ${createBlockEl(el)}
         ${createBlockEl(lumUpA)}
         ${createBlockEl(lumUpB)}
+        ${createBlockEl(lumUpC)}
     </div>`;
     container.insertAdjacentHTML('beforeEnd', newBlock);
 });
