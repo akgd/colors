@@ -5,8 +5,10 @@ colors.forEach(function (el) {
     let current = chroma(el).luminance();
     let lumDownA = chroma(el).luminance((current + -0.08), 'hsl').saturate(0.5).hex();
     let lumUpA = chroma(el).luminance((current + 0.2), 'hsl').hex();
-    let lumUpB = chroma(el).luminance((current + 0.4), 'hsl').hex();
-    let lumUpC = chroma(el).luminance((current + 0.5), 'hsl').hex();
+    let lumUpB = chroma(el).luminance((current + 0.3), 'hsl').hex();
+    let lumUpC = chroma(el).luminance((current + 0.4), 'hsl').hex();
+    let lumUpD = chroma(el).luminance((current + 0.5), 'hsl').hex();
+    let lumUpE = chroma(el).luminance((current + 0.6), 'hsl').hex();
     let newBlock = `<div class="row">
         ${createBlockEl(lumDownA, true)}
         ${createBlockEl(el, true)}
@@ -14,6 +16,8 @@ colors.forEach(function (el) {
         ${createBlockEl(lumUpA)}
         ${createBlockEl(lumUpB)}
         ${createBlockEl(lumUpC)}
+        ${createBlockEl(lumUpD)}
+        ${createBlockEl(lumUpE)}
     </div>`;
     container.insertAdjacentHTML('beforeEnd', newBlock);
 });
