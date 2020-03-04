@@ -1,4 +1,4 @@
-const colors = ['#f95a53', '#f98453', '#f8b23a', '#57bb8a', '#61bdd1', '#90989e']
+const colors = ['#f95a53', '#f98453', '#ffc74a', '#57bb8a', '#61bdd1', '#90989e']
 
 colors.forEach(function (el) {
     const container = document.querySelector('#colors');
